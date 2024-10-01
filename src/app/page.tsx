@@ -41,8 +41,14 @@ export default function Home() {
 
         {/* Right side: Profile Image */}
         <div className="profile-image">
-          <img src="./profile.jpg" alt="profile" />
-        </div>
+        <Image 
+          src="/profile.jpg" // Path to your image
+          alt="Profile"
+          className="rounded-full shadow-lg" // Optional styling
+          width={400} // Width
+          height={500} // Height
+        />
+      </div>
       </div>
     </div>
   );
