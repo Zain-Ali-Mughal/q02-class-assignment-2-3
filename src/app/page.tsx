@@ -1,3 +1,4 @@
+import image from "../../public/profile.jpg";
 import Header from "@/components/header";
 import "./globals.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import icons
@@ -9,7 +10,7 @@ export default function Home() {
       <div className="main-content">
         {/* Left side: Introduction */}
         <div className="introduction">
-          <h1>Hay' i m Zain Ali</h1>
+          <h1>Hay i am Zain Ali</h1>
           <p >
             Currently exploring the exciting world of Generative AI. My focus is on
             understanding and developing AI models that can generate creative
