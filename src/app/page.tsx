@@ -1,4 +1,4 @@
-import image from "../../public/profile.jpg";
+import Image from 'next/image';
 import Header from "@/components/header";
 import "./globals.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import icons
