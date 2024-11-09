@@ -2,24 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles */
-
 /* Applying custom font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
-  font-family: 'Roboto', sans-sarif; /* Clean modern font */
-  background-color: #f7f7f7; /* Light gray */
-  color: #333; /* Dark text */
+.body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-/* Header styling */
 .header {
-  background: linear-gradient(to right, #ff6a88, #ffcc70); /* Pink to yellow */
+  background: linear-gradient(to right, #ff6a88, #ffcc70);
   padding: 20px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .header-buttons {
@@ -33,14 +30,14 @@ body {
 
 .header-buttons li {
   font-size: 1.5rem;
-  font-weight: 600; /* Bold for emphasis */
-  text-transform: uppercase; /* Modern typography style */
+  font-weight: 600;
+  text-transform: uppercase;
   color: #333;
   transition: color 0.3s ease-in-out;
 }
 
 .header-buttons li:hover {
-  color: #79b7f1; /* Light blue on hover */
+  color: #79b7f1;
 }
 
 /* Layout styling for the main content */
@@ -50,17 +47,17 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  max-width: 1200px; /* Keeps content centered and responsive */
+  max-width: 1200px;
 }
 
 .introduction {
-  flex-basis: 60%; /* Left section for text */
+  flex-basis: 60%;
 }
 
 .introduction h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: #79b7f1; /* Light blue for your name */
+  color: #79b7f1;
   margin-bottom: 20px;
 }
 
@@ -79,22 +76,22 @@ body {
 }
 
 .social-links li {
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth animations */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links li:hover {
-  transform: translateY(-5px); /* Lift on hover */
-  color: #79b7f1; /* Highlight on hover */
+  transform: translateY(-5px);
+  color: #79b7f1;
 }
 
 .social-links img {
-  width: 24px; /* Icon size */
+  width: 24px;
   height: 24px;
 }
 
 /* Image on the right side */
 .profile-image {
-  flex-basis: 35%; /* Right section for the image */
+  flex-basis: 35%;
   display: flex;
   justify-content: center;
 }
@@ -102,7 +99,7 @@ body {
 .profile-image img {
   margin-top: 70px;
   border-radius: 50%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Circular frame with shadow */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -110,5 +107,79 @@ body {
 }
 
 .profile-image img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .introduction {
+    flex-basis: 100%;
+  }
+
+  .profile-image {
+    flex-basis: 100%;
+    margin-top: 30px;
+  }
+
+  .introduction h1 {
+    font-size: 3rem;
+  }
+
+  .introduction p {
+    font-size: 1rem;
+  }
+
+  .profile-image img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-buttons {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .header-buttons li {
+    font-size: 1.2rem;
+  }
+
+  .introduction h1 {
+    font-size: 2.5rem;
+  }
+
+  .introduction p {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    gap: 30px;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .introduction h1 {
+    font-size: 2rem;
+  }
+
+  .introduction p {
+    font-size: 0.8rem;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
 }
